@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title id="top">TextUtils.in</title>
+    <style type="text/css">
+    .contain{
+        margin-left: 30%;
+        font-size: larger;
+    }
+        #submitButton{
+            margin-top: 10px;
+            padding:7px 20px;
+            background-color: white;
+        }
+        #submitButton:hover{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color:#ff0000 ;text-align: center">TextUtils</h1>
+
+<!-- edited for django -->
+<div class="contain">
+    <form action="analyzer" method="post"> {% csrf_token %}
+        <textarea  name='analyze' style="margin: 0px; width: 653px; height: 155px;"></textarea><br><br>
+        <input type="checkbox" name="removepunc">Remove punctuations<br>
+        <input type="checkbox" name="upperc">Change to upper case<br>
+        <input type="checkbox" name="removeLine">Remove new line<br>
+        <button  id="submitButton" type="submit"> analyze</button><br><br><br>
+    </form>
+</div>
+</body>
+</html>
